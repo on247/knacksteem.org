@@ -7,16 +7,17 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import { HotKeys } from 'react-hotkeys';
 import { throttle } from 'lodash';
 import isArray from 'lodash/isArray';
-import { Icon, Checkbox, Form, Input, Select, Radio } from 'antd';
+import { Icon, Form, Input, Select, Radio } from 'antd';
 import Dropzone from 'react-dropzone';
 import EditorToolbar from './EditorToolbar';
 import * as EditorTemplates from './templates';
 import Action from '../Button/Action';
-import Body, { remarkable } from '../Story/Body';
+import Body from '../Story/Body';
 import './Editor.less';
 
 import { RulesTask } from '../RulesTask';
 import { getGithubRepos, setGithubRepos } from '../../actions/projects';
+
 const RadioGroup = Radio.Group;
 
 @connect(
@@ -542,10 +543,10 @@ class EditorTask extends React.Component {
           </div>
         </Form.Item>
 
-        {!this.state.rulesAccepted && !isUpdating  ? <RulesTask
-            inEditor={true}
-            type={chosenType}
-            acceptRules={() => this.setState({rulesAccepted: true})} />
+        {!this.state.rulesAccepted && !isUpdating ? <div><RulesTask
+            type={chosenType} />
+            <small className={'readAllRules'}><a href="https://utopian.io/rules" target="_blank">Read all the rules</a></small>
+            <AcceptRules acceptRules={() => this.setState({rulesAccepted: true})} /></div>
           : null}
 
         <div className={this.state.rulesAccepted || isUpdating ? 'rulesAccepted' : 'rulesNotAccepted'}>

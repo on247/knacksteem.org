@@ -12,13 +12,14 @@ import Dropzone from 'react-dropzone';
 import EditorToolbar from './EditorToolbar';
 import * as EditorTemplates from './templates';
 import Action from '../Button/Action';
-import Body, { remarkable } from '../Story/Body';
+import Body from '../Story/Body';
 import Autocomplete from 'react-autocomplete';
 import SimilarPosts from './SimilarPosts';
 import 'mdi/css/materialdesignicons.min.css';
 import './Editor.less';
 
 import { getGithubRepos, setGithubRepos } from '../../actions/projects';
+
 const RadioGroup = Radio.Group;
 const Option = Select.Option;
 
@@ -26,6 +27,29 @@ const Option = Select.Option;
 import { Rules } from '../Rules';
 import { getPullRequests } from '../../actions/pullRequests';
 
+const AcceptRules = ({acceptRules}) => (
+  <Action
+    className="accept-rules-btn"
+    primary
+    text={'I understand. Proceed'}
+    onClick={e => {
+      e.preventDefault();
+      acceptRules();
+    }}
+  />
+);
+
+const SyncGithub = () => (
+  <Action
+    className="accept-rules-btn"
+    disabled
+    primary
+    text={'Your Utopian account must be connected to your GitHub account'}
+    onClick={e => {
+      e.preventDefault();
+    }}
+  />
+);
 
 @connect(
   state => ({
@@ -553,6 +577,7 @@ class Editor extends React.Component {
     const { getFieldDecorator } = this.props.form;
     const { intl, loading, isUpdating, isReviewed, type, saving, getGithubRepos, repos, setGithubRepos, user, getPullRequests, pullRequests, parsedPostData } = this.props;
     const chosenType = this.state.currentType || type || 'ideas';
+    const gitHubConnectionRequired = ['development', 'bug-hunting', 'documentation'].indexOf(chosenType) !== -1;
     const hasGithubSynced = () => {
       if (!user || !user.github || !user.github.lastSynced) return false;
       return (user.github.lastSynced) != null;
@@ -644,11 +669,10 @@ class Editor extends React.Component {
           </div>
         </Form.Item>
 
-        {!this.state.rulesAccepted && !isUpdating  ? <Rules
-            inEditor={true}
-            githubSynced={hasGithubSynced()}
-            type={chosenType}
-            acceptRules={() => this.setState({rulesAccepted: true})} />
+        {!this.state.rulesAccepted && !isUpdating ? <div><Rules
+            type={chosenType} />
+            <small className={'readAllRules'}><a href="https://utopian.io/rules" target="_blank">Read all the rules</a></small>
+            {!gitHubConnectionRequired || hasGithubSynced() ? <AcceptRules acceptRules={() => this.setState({rulesAccepted: true})} /> : <SyncGithub />}</div>
           : null}
 
         <div className={this.state.rulesAccepted || isUpdating ? 'rulesAccepted' : 'rulesNotAccepted'}>
