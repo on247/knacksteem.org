@@ -508,12 +508,6 @@ class EditorTask extends React.Component {
                   </div>
                 </label>
                 <label>
-                  <Radio value="task-translations" name="type" />
-                  <div className={`translations box`}>
-                    <span>Translators</span>
-                  </div>
-                </label>
-                <label>
                   <Radio value="task-graphics" name="type" />
                   <div className={`graphics box`}>
                     <span>Designers</span>
