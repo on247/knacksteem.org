@@ -7,7 +7,7 @@ See the website in action [here:](http://knacsteem.org)
 Get in touch on Discord: https://discord.gg/XSqTRgz
 
 ### Clone and Install
-git clone https://github.com/utopian-io/utopian.io utopian.io
+git clone https://github.com/knacksteem/knacksteem knacksteem.org
 
 cd utopian.io
 
@@ -34,7 +34,7 @@ npm run dev-server
 
 
 #### API Server
-Our sister project [utopian-io/api.utopian.io](https://github.com/utopian-io/api.utopian.io) provides the back-end APIs for Utopian. If you want to run Utopian locally, you **do need**  to run that project, though you may want to check it out!
+Our sister project [knacksteem/api.knacksteem](https://github.com/knacksteem/api.knacksteem) provides the back-end APIs for knacksteem. If you want to run knacksteem locally, you **do need**  to run that project, though you may want to check it out!
 
 
 ## License
