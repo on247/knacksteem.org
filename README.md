@@ -6,10 +6,15 @@ See the website in action [here:](http://knacsteem.org)
 ## Contributing to this Project
 Get in touch on Discord: https://discord.gg/XSqTRgz
 
+## Roadmap
+1. clean the code
+2. Add suitable categories
+3. connect to the backend (api server.)
+
 ### Clone and Install
 git clone https://github.com/knacksteem/knacksteem knacksteem.org
 
-cd utopian.io
+cd knacksteem
 
 npm install
 
