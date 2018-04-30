@@ -10,7 +10,7 @@ const GetBoost = () =>
       <FormattedMessage id="tell_story" defaultMessage="Tell us your story!" />
     </h3>
     <p>
-      Tell us the story behind your contributions to this Open Source project and get rewarded for your hard work.
+      ---------
     </p>
     <p>
       <Link className="SidebarBlock__helplink" to={`/help/#contributor-report`}>

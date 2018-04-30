@@ -40,7 +40,7 @@ class Topics extends React.Component {
       <div className="Topics">
         <br />
         <b>Do you often contribute to Open Source projects?</b><br />
-        Utopian.io rewards contributors like you for the hard work!
+        Knacksteem.org rewards greate articles writters like you for your hard work!
       </div>
       /*<div className="Topics">
         <h4>

@@ -1,5 +1,5 @@
 {
-  "name": "utopian.io",
+  "name": "knacksteem.org",
   "version": "1.0.0",
   "engines": {
     "node": ">=7.10.1",
@@ -20,7 +20,7 @@
     "test:coverage": "cross-env STEEMCONNECT_IMG_HOST=https://img.busy.org jest --coverage",
     "eslint-autofix": "eslint --fix \"src/**/*.js\"",
     "lint": "eslint \"src/**/*.js\"",
-    "run:server": "nodemon --watch utopian.server.js utopian.server.js",
+    "run:server": "nodemon --watch knacksteem.server.js knacksteem.server.js",
     "build:server:dev": "cross-env NODE_ENV=development UTOPIAN_APP=utopian.app webpack --progress --config ./webpack/webpack.server.config.js",
     "build:server": "cross-env NODE_ENV=production UTOPIAN_APP=utopian.app webpack -p --config ./webpack/webpack.server.config.js",
     "build:client": "npm run cleanup-public && mkdir -p public && cp -r ./assets/* ./public/ && webpack -p --config ./webpack/webpack.prod.config.js",
@@ -180,6 +180,6 @@
       "\\.((s)css|less)$": "identity-obj-proxy"
     }
   },
-  "repository": "https://github.com/utopian-io/utopian.io.git",
+  "repository": "https://github.com/knacksteem/knacksteem.git",
   "license": "GNU Public License v3.0"
 }

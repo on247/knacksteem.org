@@ -73,7 +73,7 @@ class Page extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Utopian - Rewarding Open Source Contributors</title>
+          <title>knacksteem - Rewarding Talent</title>
         </Helmet>
         <ScrollToTop />
         <ScrollToTopOnMount />

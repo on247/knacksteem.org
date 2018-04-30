@@ -119,14 +119,14 @@ export default class User extends React.Component {
     const username = this.props.match.params.name;
     const { user } = this.props;
     const { profile = {} } = user.json_metadata || {};
-    const busyHost = global.postOrigin || 'https://utopian.io';
+    const busyHost = global.postOrigin || 'https://knacksteem.org';
     const desc = profile.about || `Post by ${username}`;
     const image = `${process.env.STEEMCONNECT_IMG_HOST}/@${username}`;
     const canonicalUrl = `${busyHost}/@${username}`;
     const url = `${busyHost}/@${username}`;
     const displayedUsername = profile.name || username || '';
     const hasCover = !!profile.cover_image;
-    const title = `${displayedUsername} - Utopian`;
+    const title = `${displayedUsername} - Knacksteem`;
 
     const isSameUser = authenticated && authenticatedUser.name === username;
 
@@ -144,7 +144,7 @@ export default class User extends React.Component {
           <meta property="og:url" content={url} />
           <meta property="og:image" content={image} />
           <meta property="og:description" content={desc} />
-          <meta property="og:site_name" content="Utopian" />
+          <meta property="og:site_name" content="Knacksteem" />
 
           <meta property="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
           <meta property="twitter:site" content={'@steemit'} />

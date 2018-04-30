@@ -12,7 +12,7 @@ module.exports = {
   entry: path.resolve(baseDir, './server/index.js'),
 
   output: {
-    filename: 'utopian.server.js',
+    filename: 'knacksteem.server.js',
   },
 
   target: 'node',
