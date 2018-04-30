@@ -12,7 +12,7 @@ export default () =>
       </h1>
       <p>
         <FormattedMessage
-          id="@statics/utopian_team"
+          id="@statics/knacksteem_team"
           defaultMessage="The Busy team draws on years of experience across multiple successful startup projects and helps guide the foundation towards its strategic goals."
         />
       </p>

@@ -313,8 +313,8 @@ class Write extends React.Component {
     if (this.state.isUpdating) data.isUpdating = this.state.isUpdating;
 
     const metaData = {
-      community: 'utopian',
-      app: `utopian/${version}`,
+      community: 'knacksteem',
+      app: `knacksteem/${version}`,
       format: 'markdown',
       repository: form.repository,
       pullRequests: form.pullRequests || [],

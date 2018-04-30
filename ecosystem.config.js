@@ -5,8 +5,8 @@ module.exports = {
    */
   apps: [
     {
-      name: 'utopian',
-      script: 'utopian.server.js',
+      name: 'Knacksteem',
+      script: 'Knacksteem.server.js',
       instances: 4,
       exec_mode: 'cluster',
       max_memory_restart: '600M'

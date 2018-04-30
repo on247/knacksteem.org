@@ -18,9 +18,9 @@ const Error404 = () =>
         <p>
           <FormattedMessage
             id="@statics/is_a_problem_0"
-            defaultMessage="If you think this is a problem with Utopian, please"
+            defaultMessage="If you think this is a problem with Knacksteem, please"
           />{' '}
-          <a rel="noopener noreferrer" href="https://utopian.io" target="_blank">
+          <a rel="noopener noreferrer" href="https://knacksteem.io" target="_blank">
             <FormattedMessage id="@statics/is_a_problem_1" defaultMessage="tell us" />
           </a>
           .<br />

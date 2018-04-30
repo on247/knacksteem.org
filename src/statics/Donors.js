@@ -16,7 +16,7 @@ const Donors = () =>
         />
         .
       </p>
-      <Link className="btn btn-primary my-4" to="/transfer?to=utopian-io">
+      <Link className="btn btn-primary my-4" to="/transfer?to=knacksteem-io">
         <FormattedMessage id="donate" defaultMessage="Donate" />
       </Link>
       <div className="row my-5">

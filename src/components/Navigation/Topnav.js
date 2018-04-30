@@ -334,12 +334,12 @@ class Topnav extends React.Component {
     }
 
     const logoSource = () => {
-      var prefix = "https://raw.githubusercontent.com/utopian-io/utopian.io/new-design/assets";
+      var prefix = "https://raw.githubusercontent.com/knacksteem/knacksteem/master";
       if (process.env.NODE_ENV === 'production') prefix = "";
       if (window.innerWidth > 736) {
-        return `${prefix}/img/utopian-sole.png`;
+        return `${prefix}/Logo/Asset 13-24.png`;
       } else {
-        return `${prefix}/img/utopian-sole.png`;
+        return `${prefix}/Logo/Asset 13-24.png`;
       }
     }
 
