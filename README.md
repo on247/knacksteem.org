@@ -12,7 +12,7 @@ Get in touch on Discord: https://discord.gg/XSqTRgz
 3. connect to the backend (api server.)
 
 ### Clone and Install
-git clone https://github.com/knacksteem/knacksteem knacksteem.org
+git clone git@github.com:knacksteem/knacksteem.org.git knacksteem.org
 
 cd knacksteem
 
